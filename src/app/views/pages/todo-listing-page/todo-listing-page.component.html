@@ -1,0 +1,37 @@
+<div class="container-fluid  mt-3">
+    <div class="row">
+        <h2 class="alert alert-info">
+            Todo Ekranı
+        </h2>
+    </div>
+    <div class="row offset-3">
+        <div class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Tamamlanma</th>
+                    <th>İçerik</th>
+                    <th>Tarih</th>
+                    
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of todos;">
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" [value]="item.isCompleted" id="completed" [checked]="item.isCompleted" (change)="getComplete(item.id!)">
+                        </div>
+                    </td>
+                    <th> {{item.id}} </th>
+                    <td> {{item.content}} </td>
+                    <td> {{item.created | date: 'short'}} </td>
+                   
+                    <td>
+                        <button class="btn btn-outline-danger" (click)="delete(item.id)">Sil</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </div>
+    </div>
+</div>
