@@ -6,9 +6,10 @@
     </div>
     <div class="row p-3">
         <form (ngSubmit)="save()" [formGroup]="form">
-            <textarea class="form-control" placeholder="Yapılacak işi yazınız..." cols="30" rows="10" formControlName="content"></textarea>        
+            <textarea class="form-control" placeholder="Yapılacak işi yazınız..." cols="30" rows="10"
+                formControlName="content"></textarea>
             <div class="text-center">
-                <button class="btn btn-outline-success mt-4 p-4">Ekle</button>
+                <button class="btn btn-outline-success mt-4 p-4" #btn [textContent]="isUpdate()">Ekle</button>
             </div>
         </form>
     </div>

@@ -8,22 +8,22 @@ import { TodoListingPageComponent } from './views/pages/todo-listing-page/todo-l
 import { TodoAddingPageComponent } from './views/pages/todo-adding-page/todo-adding-page.component';
 import { NavbarComponent } from './views/components/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     UserLayoutPageComponent,
     TodoListingPageComponent,
     TodoAddingPageComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

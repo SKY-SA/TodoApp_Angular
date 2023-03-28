@@ -8,6 +8,7 @@ const routes: Routes = [
   {path:'', component:UserLayoutPageComponent, children:[
     {path:'', component:TodoListingPageComponent},
     {path:'adding', component:TodoAddingPageComponent},
+    {path:'adding/:id', component:TodoAddingPageComponent},
   ]}
 ];
 

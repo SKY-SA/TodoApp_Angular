@@ -4,15 +4,18 @@
             Todo Ekranı
         </h2>
     </div>
-    <div class="row offset-3">
+    <div class="row offset-2">
+        <a  routerLink="" [queryParams]="{isCompleted:true}" class="link-info">Tamamlananları Gör</a>
+        <!-- <a  class="link-info">Tamamlananları Gör</a> -->
         <div class="table table-hover">
             <thead>
                 <tr>
-                    <th>Tamamlanma</th>
+                    <th></th>
+                    <th>Id</th>
                     <th>İçerik</th>
                     <th>Tarih</th>
-                    
-                    <th>Sil</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +28,9 @@
                     <th> {{item.id}} </th>
                     <td> {{item.content}} </td>
                     <td> {{item.created | date: 'short'}} </td>
-                   
+                    <td>
+                        <button class="btn btn-outline-secondary" (click)="update(item.id)">Güncelle</button>
+                    </td>
                     <td>
                         <button class="btn btn-outline-danger" (click)="delete(item.id)">Sil</button>
                     </td>
